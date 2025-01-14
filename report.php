@@ -19,33 +19,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// // Export to Excel logic
-// if (isset($_POST['export_excel'])) {
-//     // Export headers should come first before any output
-//     header("Content-Type: application/xls");
-//     header("Content-Disposition: attachment; filename=admission_report.xls");
-//     header("Pragma: no-cache");
-//     header("Expires: 0");
-
-//     $output = fopen("php://output", "w");
-
-//     // Column headers
-//     fputcsv($output, ['Admission ID', 'Title', 'First Name', 'Middle Name', 'Last Name', 'Full Name', 'Mother Name', 'Gender', 'Address', 'Mobile', 'Email', 'DOB', 'Age', 'District', 'Taluka', 'State', 'Religion', 'Caste', 'Caste Category', 'Marksheet', 'Photo', 'Signature', 'Physically Handicapped']);
-
-//     // Query to fetch data
-//     $sql = "SELECT admission_id, title, first_name, middle_name, last_name, CONCAT(first_name, ' ', middle_name, ' ', last_name) AS full_name, mother_name, gender, address, mobile, email, dob, age, district, taluka, state, religion, caste, caste_category, marksheet, photo, signature, physically_handicapped FROM admission_form";
-    
-//     $result = $conn->query($sql);
-
-//     // Fetch each row and write to the CSV
-//     while ($row = $result->fetch_assoc()) {
-//         fputcsv($output, $row);
-//     }
-
-//     fclose($output);
-//     exit;
-// }
-
 // Report Section (report.php)
 $sql = "SELECT * FROM admission_form";
 $result = $conn->query($sql);
@@ -390,4 +363,4 @@ if ($result->num_rows > 0) {
 <?php
 // End output buffering and send output
 ob_end_flush();
-?>
+?>+
