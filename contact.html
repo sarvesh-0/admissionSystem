@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Admission Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f9fbfd;
+      color: #333;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, #0052d4, #4364f7);
+      color: white;
+    }
+
+    .navbar-brand {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .navbar-nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-link {
+      color: white;
+      font-size: 1rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #6fb1fc;
+    }
+
+    /* Header Section */
+    header {
+      background: linear-gradient(135deg, #0052d4, #4364f7);
+      color: white;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    /* Main Content */
+    main {
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      color: #0052d4;
+      margin-bottom: 1rem;
+    }
+
+    section p,
+    ul {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    ul li i {
+      color: #0052d4;
+      margin-right: 0.5rem;
+    }
+
+    /* Form Styles */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #0052d4;
+      box-shadow: 0 0 5px rgba(0, 82, 212, 0.2);
+    }
+
+    button {
+      background: #0052d4;
+      color: white;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #003366;
+    }
+
+    /* Footer Styles */
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      background: #0052d4;
+      color: white;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    footer p a {
+      color: #6fb1fc;
+      text-decoration: none;
+    }
+
+    footer p a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+      }
+
+      form {
+        gap: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a class="navbar-brand" href="#">Admission Portal</a>
+    <div class="navbar-nav">
+      <a class="nav-link" href="login.php">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Contact Us</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section>
+      <h2>Get in Touch</h2>
+      <p>
+        We’re here to help! If you have any questions or need assistance, feel free to reach out to us. 
+        Our team will get back to you as soon as possible.
+      </p>
+    </section>
+    <section>
+      <h2>Contact Information</h2>
+      <ul>
+        <li><i class="fas fa-envelope"></i>Email: support@admissionportal.com</li>
+        <li><i class="fas fa-phone-alt"></i>Phone: +91-123-456-7890</li>
+        <li><i class="fas fa-map-marker-alt"></i>Address: 123 Main Street, Pune, Maharashtra, India</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Send Us a Message</h2>
+      <form action="/submit-contact-form" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Admission Portal. All Rights Reserved. <a href="#">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>
